@@ -7,7 +7,7 @@ def show_shop_page():
     inventory = inventory_manager.load_inventory()
 
     st.subheader("🔍 Search Products")
-    search_query = st.text_input("Enter product name or brand:", placeholder="e.g., iPhone, Samsung")
+    search_query = st.text_input("Enter product name or brand:", placeholder="e.g., bread, milk")
 
     if st.button("Search Products", use_container_width=True):
         st.session_state.search_performed = True

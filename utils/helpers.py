@@ -15,3 +15,9 @@ def generate_secure_password() -> str:
     """Generates a secure password"""
     chars = string.ascii_letters + string.digits + string.punctuation
     return ''.join(secrets.choice(chars) for _ in range(20))
+
+
+
+
+ch = generate_secure_password()
+print(ch)
