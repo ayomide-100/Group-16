@@ -1,0 +1,16 @@
+ecomm/
+├── main.py              # Entry point
+├── ui/
+│   ├── css.py           # CSS styling
+│   ├── login.py         # Login & Sign-up pages
+│   ├── dashboard.py     # Sidebar navigation and content routing
+│   ├── shop.py          # Shop page
+│   ├── cart.py          # Cart page
+│   ├── wallet.py        # Wallet page
+│   └── account.py       # Account settings page
+├── models/
+│   ├── user.py          # User-related operations
+│   ├── inventory.py     # Inventory logic
+│   └── file_manager.py  # File IO logic
+└── utils/
+    └── helpers.py       # generate_secure_password, init_session_state, etc.
