@@ -3,6 +3,11 @@ from models.inventory import Inventory
 from models.user import User
 
 def show_cart_page():
+    if st.session_state.get("payment_success"):
+        st.success("✅ Payment successful! Thank you for shopping with us!")
+        st.balloons()
+        del st.session_state["payment_success"]
+
     st.header("🛍️ Your Shopping Cart")
 
     if not st.session_state.cart:
@@ -77,8 +82,7 @@ def show_cart_page():
                 User().update_user_balance(user)
                 st.session_state.user = user
                 st.session_state.cart = {}
-                st.success(" Payment successful! Thank you for shopping with us!")
-                st.balloons()
+                st.session_state.payment_success = True  
                 st.rerun()
             else:
                 st.error("❌ Insufficient balance. Please fund your wallet first.")
