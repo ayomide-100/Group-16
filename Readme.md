@@ -38,29 +38,29 @@ Designed with a **dark-themed UI**, optimized for **clarity, reusability, and sc
 
 ##  Project Structure
 ecomm/
-├── main.py               # App entry point
-├── models/               # Core backend logic
-│   ├── file_manager.py
-│   ├── user.py
-│   └── inventory.py
-├── ui/                   # UI components
-│   ├── css.py
-│   ├── login.py
-│   ├── dashboard.py
-│   ├── shop.py
-│   ├── cart.py
-│   ├── wallet.py
-│   └── account.py
-├── utils/
-│   └── helpers.py        # Session state & utilities
-└── data/
+-├── main.py               # App entry point
+-├── models/               # Core backend logic
+-│   ├── file_manager.py
+-│   ├── user.py
+-│   └── inventory.py
+-├── ui/                   # UI components
+-│   ├── css.py
+-│   ├── login.py
+-│   ├── dashboard.py
+-│   ├── shop.py
+-│   ├── cart.py
+-│   ├── wallet.py
+-│   └── account.py
+-├── utils/
+-│   └── helpers.py        # Session state & utilities
+-└── data/
     
 
 
 ## Contributors
-Ayomide Adegoke – [aadegoke100@gmail.com](mailto:aadegoke100@gmail.com)
-Lauretta Omekam - 
-Abdullahi Fahad Tukura - [abdullahifahad223@gmail.com](mailto:abdullahifahad223@gmail.com)
+-Ayomide Adegoke – [aadegoke100@gmail.com](mailto:aadegoke100@gmail.com)
+-Lauretta Omekam - 
+-Abdullahi Fahad Tukura - [abdullahifahad223@gmail.com](mailto:abdullahifahad223@gmail.com)
 
 
 Contributions welcome! Feel free to fork, improve, and submit pull requests.
