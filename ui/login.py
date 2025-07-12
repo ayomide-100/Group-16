@@ -37,22 +37,20 @@ def show_login_page():
             new_username = st.text_input(" Username", max_chars=30)
             new_email = st.text_input(" Email Address", max_chars=50)
 
-            password_option = st.radio(" Password Setup", ["Enter manually", "Generate secure password"])
+            password_option = st.radio("Password Setup", ["Enter manually", "Generate secure password"])
 
             if password_option == "Enter manually":
-                new_password = st.text_input(" Password", type="password", max_chars=50)
-                st.caption(" Password must be 16+ characters with uppercase, lowercase, number, and symbol")
+                new_password = st.text_input("Password", type="password", max_chars=50)
+                st.caption("Password must be 16+ characters with uppercase, lowercase, number, and symbol")
             else:
-                if st.button(" Generate Secure Password"):
+                if 'generated_password' not in st.session_state:
                     st.session_state.generated_password = generate_secure_password()
 
-                if 'generated_password' in st.session_state:
-                    st.markdown("** Your Generated Password:**")
-                    st.code(st.session_state.generated_password)
-                    st.caption(" Please save this password securely!")
-                    new_password = st.session_state.generated_password
-                else:
-                    new_password = ""
+                st.markdown("**Your Generated Password:**")
+                st.code(st.session_state.generated_password)
+                st.caption("Please save this password securely!")
+                new_password = st.session_state.generated_password
+
 
             signup_button = st.form_submit_button(" Create Account", use_container_width=True)
 
