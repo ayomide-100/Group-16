@@ -65,7 +65,7 @@ def show_cart_page():
     col1, col2, col3 = st.columns([1, 1, 1])
 
     with col1:
-        if st.button("🧹 Clear Cart", use_container_width=True):
+        if st.button(" Clear Cart", use_container_width=True):
             st.session_state.cart = {}
             st.success("Cart cleared!")
             st.rerun()
